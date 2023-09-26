@@ -227,5 +227,22 @@ const taxcalcultion=(rate,value)=>{
 }
 taxcalcultion(10,500);
 
+const addtax=(rate,value)=>value +value * rate;
+console.log(addtax(0.1,200));
+
+const addvat=addtax.bind(null,0.23);
+// addvat=addtax =>value+value*0.23;
+
+console.log(addvat(100));
+console.log(addvat(23));
+
+const addtaxrate=function(rate){
+    return function (value){
+        return value +value*rate;
+    };
+};
+
+const addvat2=addtaxrate(0.23);
+console.log(addvat2(300));
 
 
