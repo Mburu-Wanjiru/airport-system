@@ -245,4 +245,12 @@ const addtaxrate=function(rate){
 const addvat2=addtaxrate(0.23);
 console.log(addvat2(300));
 
+//immediately invoked function expressions
+// these are functions that is called once and cannot be re used.
+ (function(){
+    console.log(`Mburu you are a genius`);
+ }) ();
+//  
+(()=>console.log(`I am the greatest`)) ();
+
 
